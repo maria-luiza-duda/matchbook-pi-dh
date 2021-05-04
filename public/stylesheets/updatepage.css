@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ropa Sans', sans-serif;
+    color: #777777;
+
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    /* margin-bottom: 30px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-between;
+    background: #AA6DC7;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+}
+
+button{
+    position: absolute;
+    width: 92px;
+    height: 30px;
+    left: 1160px;
+    top: 30px;
+
+    font-family: Rhodium Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    
+   align-items: center;
+
+    color: #131212;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    background: #A1C8EB;
+    border-radius: 10px;
+}
+
+.idioma{
+    position: absolute;
+    width: 132px;
+    height: 40px;
+    left: 1036px;
+    top: 15px;
+
+    font-family: Rhodium Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 65px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+main h2{
+    position: absolute;
+    width: 504px;
+    height: 92px;
+    left: 370px;
+    top: 100px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+   
+
+    
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.projects .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+}
+
+
+.name{
+    position: absolute;
+    width: 162px;
+    height: 46px;
+    left: 140px;
+    top: 150px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.form-name input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 190px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.email{
+    position: absolute;
+    width: px;
+    height: 46px;
+    left: 140px;
+    top: 260px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-email input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 300px;
+    
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.telefone{
+    position: absolute;
+    width: px;
+    height: 46px;
+    left: 140px;
+    top: 370px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-telefone input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 410px;
+    
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.genero{
+    position: absolute;
+width: 162px;
+height: 46px;
+left: 748px;
+top: 150px;
+
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 65px;
+/* or 271% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-genero input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 190px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.nascimento{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 748px;
+    top: 260px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-data input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 300px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.senha{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 748px;
+    top: 370px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-senha input{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 748px;
+    top: 410px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.confirmarpassword{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 960px;
+    top: 370px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-confirmarsenha input{
+   
+    position: absolute;
+width: 160px;
+height: 50px;
+left: 960px;
+top: 410px;
+
+background: #DEDEDE;
+border-radius: 10px;
+    
+}
+
+main h3{
+    position: absolute;
+    width: 504px;
+    height: 92px;
+    left: 370px;
+    top: 600px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+   
+
+    
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cep{
+    position: absolute;
+    width: 162px;
+    height: 46px;
+    left: 140px;
+    top: 700px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.form-cep input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 750px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.rua{
+    position: absolute;
+    width: px;
+    height: 46px;
+    left: 140px;
+    top: 820px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-rua input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 860px;
+    
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.complemento{
+    position: absolute;
+    width: px;
+    height: 46px;
+    left: 140px;
+    top: 920px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-complemento input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 133px;
+    top: 980px;
+    
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.numero{
+    position: absolute;
+width: 162px;
+height: 46px;
+left: 748px;
+top: 700px;
+
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 65px;
+/* or 271% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-numero input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 750px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.bairro{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 748px;
+    top: 820px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-bairro input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 860px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.cidade{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 748px;
+    top: 920px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-cidade input{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 748px;
+    top: 980px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.estado{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 960px;
+    top: 920px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-estado input{
+    position: absolute;
+width: 160px;
+height: 50px;
+left: 960px;
+top: 980px;
+
+background: #DEDEDE;
+border-radius: 10px;
+}
+
+.cta-cadastro button
+{
+
+    position: absolute;
+    width: 200px;
+    height: 34px;
+    left: 520px;
+    top: 1070px;
+    
+    background: #A1C8EB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transform: rotate(-0.03deg);
+
+}
+
+.botao{
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    
+
+
+    
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+
+
+
+
+footer{
+    position: absolute;
+width: 100%;
+height: 57px;
+left: 0px;
+top: 1150px;
+
+background: #75A3CD;
+}
+
+footer .roda-pe{
+    position: absolute;
+
+height: 24px;
+left: 500px;
+top: 10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+
+
+color: #000000;
+}
+
+
+@media (max-width: 1010px) {
+    section.projects .container {
+        padding: 50px;
+        justify-content: center;
+    }
+}
+
+
+
+button:hover{
+    transition: 0.3s;
+    color: white;
+    border: 10px;
+   border: white;
+  }
