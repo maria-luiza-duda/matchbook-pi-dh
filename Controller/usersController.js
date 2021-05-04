@@ -1,10 +1,10 @@
 const { User, sequelize } = require('../models');
 const bcrypt = require('bcryptjs');
-const { v4:uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 
 const usersController = {
 
-    index: async (req, res) => {
+    index: async(req, res) => {
         let users = await User.findAll();
 
         return res.json(users);
@@ -18,16 +18,19 @@ const usersController = {
         return res.render('registeruser')
     },
 
-    myprofile: (req, res) =>{
-        return res.render('myprofile', {userlogin: req.session.usersOn})
+    myprofile: (req, res) => {
+        return res.render('myprofile', { userlogin: req.session.usersOn })
     },
 
 
-    login: (req, res) =>{
+    login: (req, res) => {
         return res.render('login')
     },
-    
-    auth: async (req, res) => {
+    updatepage: (req, res) => {
+        return res.render('updatepage', { userlogin: req.session.usersOn })
+    },
+
+    auth: async(req, res) => {
         const { email, password } = req.body;
 
         const users = await User.findOne({
@@ -42,18 +45,26 @@ const usersController = {
         }
     },
 
-    create: async (req, res) => {
-        const { name, email,  password, gender, date_of_birth, phone_number, street,
+    create: async(req, res) => {
+        const {
+            name,
+            email,
+            password,
+            gender,
+            date_of_birth,
+            phone_number,
+            street,
             number,
             complement,
             neighborhood,
             city,
             state,
-            zip_code} = req.body;
-        
+            zip_code
+        } = req.body;
+
         const passwordCrypt = bcrypt.hashSync(password, 10);
         const user_id = uuidv4();
-       
+
         const newUsers = await User.create({
             id: uuidv4(),
             name,
@@ -69,21 +80,31 @@ const usersController = {
             city,
             state,
             zip_code
-            
+
         });
 
         return res.json(newUsers);
     },
 
-    update: async (req, res) => {
-        const { id } = req.params;
-        const { name, email,  password, gender, date_of_birth, phone_number, street,
+    update: async(req, res) => {
+        const { id } = req.session.usersOn;
+        const {
+            name,
+            email,
+            password,
+            gender,
+            date_of_birth,
+            phone_number,
+            street,
             number,
             complement,
             neighborhood,
             city,
             state,
-            zip_code} = req.body;
+            zip_code
+        } = req.body;
+
+        const passwordCrypt = bcrypt.hashSync(password, 10);
 
         const user = await User.update({
             name,
@@ -103,11 +124,10 @@ const usersController = {
             where: { id }
         });
 
-
-        return res.json(user);
+        return res.redirect(`/users/myprofile`);
     },
 
-    delete: async (req, res) => {
+    delete: async(req, res) => {
         const { id } = req.params;
 
         const Users = await User.destroy({
