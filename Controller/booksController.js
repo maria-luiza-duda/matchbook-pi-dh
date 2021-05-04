@@ -23,7 +23,11 @@ const booksController = {
 
     create: async (request, response) => {
         let { name, author, description, publisher, generes_id, cover, users_id } = request.body;
+        
+        let filename = 'cover-image.png'
 
+        req.file != undefined ? filename = req.file.filename : null
+       
         let newBook = await Book.create({
             id: uuidv4(),
             name,

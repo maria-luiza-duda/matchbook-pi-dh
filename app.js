@@ -12,7 +12,6 @@ var booksRouter = require('./routes/booksRouter');
 var interestsRouter = require('./routes/interestsRouter');
 var generesRouter = require('./routes/generesRouter');
 var matchbookRouter = require('./routes/matchbookRouter');
-var uploadsRouter = require('./routes/uploadsRouter');
 
 
 var app = express();
@@ -36,7 +35,6 @@ app.use('/books', booksRouter);
 app.use('/interests', interestsRouter);
 app.use('/generes', generesRouter);
 app.use('/matchbooks', matchbookRouter);
-app.use('/files', uploadsRouter);
 
 
 // catch 404 and forward to error handler
