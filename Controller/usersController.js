@@ -15,12 +15,13 @@ const usersController = {
         return res.json(users);
     },
 
-    mybooks: (req, res) => {
-        return res.render('mybooks')
-    },
 
     registeruser: (req, res) => {
         return res.render('registeruser')
+    },
+
+    registeredBooks: (req, res) => {
+        return res.render('registeredBooks')
     },
 
     myprofile: (req, res) => {
@@ -88,7 +89,7 @@ const usersController = {
 
         });
 
-        return res.json(newUsers);
+        return res.redirect('/users/login');
     },
 
     update: async(req, res) => {
@@ -129,7 +130,7 @@ const usersController = {
             where: { id }
         });
 
-        return res.redirect(`/users/myprofile`);
+        return res.redirect(`/users/login`);
     },
 
     delete: async(req, res) => {

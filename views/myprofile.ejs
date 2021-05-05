@@ -50,7 +50,7 @@
                 
                 <div class="cta-cadastro">               
                     <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
-                        <button class="botao" type="submit"> Deletar Usuario</button>
+                        <button id="bt" class="botao" type="submit" onforminput="ConfirmDelete()"> Deletar Usuario</button>
                     </form>
                 </div>
                
@@ -75,6 +75,7 @@
             </div>
         </div>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
