@@ -662,4 +662,8 @@ button:hover{
    border: white;
   }
 
+form input:hover{
 
+    
+    border: white;
+}

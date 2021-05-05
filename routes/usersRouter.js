@@ -20,6 +20,7 @@ router.post('/login', usersController.auth);
 router.put('/:id', usersController.update);
 router.delete('/:id', usersController.delete);
 
+
 router.get('/updatepage', auth, usersController.updatepage);
 
 module.exports = router;
