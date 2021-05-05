@@ -30,7 +30,7 @@ const booksController = {
             cover
         });
 
-        return response.redirect(newBook);
+        return response.redirect('/books/list');
     },
     update: async (request, response) => {
         let { id } = request.params;
@@ -53,7 +53,7 @@ const booksController = {
 
     delete: async (request, response) => {
 
-        let { id } = request.params;
+        let { id } = request.session.usersOn;
 
         const deletedBook = await Book.destroy({
             where: { id }

@@ -15,12 +15,13 @@ const usersController = {
         return res.json(users);
     },
 
-    mybooks: (req, res) => {
-        return res.render('mybooks')
-    },
 
     registeruser: (req, res) => {
         return res.render('registeruser')
+    },
+
+    registeredBooks: (req, res) => {
+        return res.render('registeredBooks')
     },
 
     myprofile: (req, res) => {

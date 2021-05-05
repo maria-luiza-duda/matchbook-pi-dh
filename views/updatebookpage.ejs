@@ -25,7 +25,7 @@
                             <button class="botao-livros" type="menu" onclick="document.location='users/mybooks'">LIVROS</button>
                             <button class="botao-perfil" type="menu" href="views/">MEU PERFIL</button>
                         </nav> 
-                        <h2>CADASTRE UM LIVRO</h2>
+                        <h2>ATUALIZAR LIVRO</h2>
                 </div>
                 <div class="container-btnvoltar">
                     <button onclick="document.location='books/registerbook'">Voltar</button>
@@ -33,7 +33,7 @@
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books" method="POST" >
+                        <form method="POST" action="/books/<%= userlogin.id %>?_method=">
                             <input type="hidden" name="users_id" value="<%= userlogin.id %>">
                             <div class="form-name">
                                <strong class="name">Título:</strong>
@@ -98,7 +98,7 @@
                             </div>
 
                             <div class="cadastrar">
-                                <button class="botao" type="submit" >Cadastrar livro</button>
+                                <button class="botao" type="submit" >Atualizar livro</button>
                             </div>
 
                         </form>                  
