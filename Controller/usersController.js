@@ -1,6 +1,11 @@
-const { User, sequelize } = require('../models');
+const { Book, User, sequelize } = require('../models');
+
+
+
 const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
+
+
 
 const usersController = {
 
@@ -128,14 +133,20 @@ const usersController = {
     },
 
     delete: async(req, res) => {
-        const { id } = req.params;
-
+        const { id } = req.session.usersOn
+        
+        const deletedBook = await Book.destroy({
+            where: { users_id: id  
+            }
+        });
         const Users = await User.destroy({
             where: { id }
         });
-
+        
         return res.json(Users);
     }
+
+    
 
 }
 

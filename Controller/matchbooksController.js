@@ -21,13 +21,13 @@ const matchbookController = {
     },
 
     delete: async (request, response) => {
-        const { id } = req.params;
+        const { id } = request.params;
 
         const matchbook = await Matchbook.destroy({
             where: { id }
         });
 
-        return res.json(matchbook);
+        return response.json(matchbook);
     }
 }
 
