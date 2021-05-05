@@ -1,20 +1,15 @@
 
 const { request, response } = require('express');
-const { Book, sequelize } = require('../models/');
+const { User, Book, sequelize } = require('../models/');
 const { v4:uuidv4 } = require('uuid');
 
 
 const booksController = {
-    index: async (req, res) => {
+    index: async (request, response) => {
         let books = await Book.findAll();
 
-        return res.json(books);
+        return response.render('mybooks', { listaBooks: books });
     },
-    // index: async (request, response) => {
-    //     let books = await Book.findAll();
-
-    //     return response.render('mybooks', { listaBooks: books });
-    // },
     
     registerbook: (request, response) =>{
         
@@ -67,8 +62,23 @@ const booksController = {
 
     },
 
+    auth: async(req, res) => {
+        const { email, password } = req.body;
+
+        const users = await User.findOne({
+            where: { email }
+        });
+
+        if (users && bcrypt.compareSync(password, users.password)) {
+            req.session.usersOn = users;
+            return res.redirect('/books/list');
+        } else {
+            return res.redirect('/users/login');
+        }
+    },
+
     show: async (request, response) => {
-        const { id } = request.params;
+        const { id } = request.session.usersOn;
 
         const booksforUser = await Book.findAll({
             where: {
@@ -76,7 +86,7 @@ const booksController = {
             }
         });
 
-        return response.json(booksforUser);
+        return response.render('registeredBooks', { listaBooks: booksforUser });
     }
 
 }
