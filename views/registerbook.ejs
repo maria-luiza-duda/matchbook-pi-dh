@@ -89,15 +89,8 @@
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
                             </div>
 
-                                <div class="input-file">
-                                    <div id="upload-cover">
-                                        <input id="cover-input" type="file" name="cover" accept="image/*" onchange="addPhoto(event)">
-                                        <p>Enviar foto da capa do livro</p>
-                                    </div>
-                                </div>
-
-                            <div class="cta-cadastro">
-                                <button class="botao" type="submit">Cadastrar livro</button>
+                            <div class="next-page">
+                                <button class="botao" type="submit" onclick="document.location='books'">Continuar</button>
                             </div>
 
                         </form>                  
@@ -106,23 +99,14 @@
         </section>
     </main>
 
+</body>
+
     <footer>
-        <div class="container">
+        <div class="conteiner">
             <div class="roda-pe">
                 <h3>Match Book © 2021. Todos os direitos reservados</h3>
             </div>
         </div>
     </footer>
-
-    <script>
-        const input = document.querySelector('#cover-input')
-        const p = document.querySelector('.input-file p')
-
-        function addPhoto(event) {
-            p.innerText = "Foto enviada"
-        }
-    </script>
-
-</body>
 
 </html>

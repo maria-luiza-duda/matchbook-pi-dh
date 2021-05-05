@@ -94,27 +94,6 @@ header {
     position: absolute;
 }
 
-.container-form form .form-name {
-    padding: 30px 10px 5px;
-}
-
-.container-form form .form-author {
-    padding: 30px 10px 5px;
-}
-
-.container-form form .form-publisher {
-    padding: 30px 10px 5px;
-}
-
-.container-form form .form-generes {
-    padding: 30px 10px 5px;
-}
-
-.container-form form .form-description {
-    padding: 30px 10px 5px;
-    height: 100px;
-}
-
 .container-form .cta-cadastro button {
     padding: 5px;
     margin: 30px 300px;
