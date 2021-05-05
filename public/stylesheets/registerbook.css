@@ -155,27 +155,30 @@ header {
 
   button:hover{
     transition: 0.3s;
-    color: white;
+    color: black;
     border: 10px;
-   border: white;
+   border: black;
   }
   .logo{
     width: 60px;
     height: 60px;
   }
 
-  footer .roda-pe{
-    position: absolute;
-  
-    height: 24px;
-    left: 500px;
-    top: 10px;
-  
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-  
-    color: rgba(117, 163, 205, 0.72);
-  
+  .cadastrar button {
+    padding: 5px;
+    margin: 30px 300px;
+    width: 200px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .input-url img {
+    position: relative;
+    margin: 40px;
+}
+
+  .input-url {
+      position: absolute;
+      margin: -350px 450px;
   }
