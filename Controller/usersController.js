@@ -88,7 +88,7 @@ const usersController = {
 
         });
 
-        return res.json(newUsers);
+        return res.redirect('/users/login');
     },
 
     update: async(req, res) => {
@@ -129,7 +129,7 @@ const usersController = {
             where: { id }
         });
 
-        return res.redirect(`/users/myprofile`);
+        return res.redirect(`/users/login`);
     },
 
     delete: async(req, res) => {

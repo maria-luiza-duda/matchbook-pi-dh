@@ -35,7 +35,7 @@ const booksController = {
             cover
         });
 
-        return response.json(newBook);
+        return response.redirect(newBook);
     },
     update: async (request, response) => {
         let { id } = request.params;
