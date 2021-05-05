@@ -221,7 +221,7 @@ transform: rotate(-0.03deg);
 .cta-cadastro button
 {
 
-position: absolute;
+position: relative;
 width: 200px;
 height: 34px;
 left: 99px;
@@ -251,6 +251,22 @@ transform: rotate(-0.03deg);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 
+}
+
+form button {
+   
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    
+
+
+    
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
 .perfil{
