@@ -27,9 +27,11 @@ section.principal .container {
     margin: 0;
 }
 
-section.principal article {
-    width: 500px;
-    max-width: 100%;
+.board {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .board div {
@@ -37,41 +39,54 @@ section.principal article {
 }
 
 .navigation {
-    height: 20px;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
 }
 
-.livro-img {
-    width: 100%;
-    max-width: 100%;
-    height: 540px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .back {
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .exibithion {
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.exibithion div {
+.exibithion .card {
     width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 0;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.exibithion .cover {
+    width: 100%;
     height: 350px;
     background-position: center;
     background-size: cover;
-    border: 1px solid black;
     border-radius: 10px;
-    margin: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    text-align: center;
 }
 
 footer {
