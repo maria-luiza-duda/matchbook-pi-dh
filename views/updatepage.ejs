@@ -28,23 +28,23 @@
                 <form method="POST" action="/users/<%= userlogin.id %>?_method=PUT">
                     <div class="form-name">
                         <strong class="name">Nome:</strong>
-                        <input type="text" name="name" id="input_name" placeholder="Nome do usuario" value="<%= userlogin.name %> ">
+                        <input type="text" name="name" id="input_name" placeholder="Nome do usuario" value="<%= userlogin.name %> " required >
                     </div>
                     <div class="form-email">
                         <strong class="email">Email:</strong>
-                        <input type="email" name="email" id="input_email" placeholder="Email do usuario" value="<%= userlogin.email %> ">
+                        <input type="email" name="email" id="input_email" placeholder="Email do usuario" value="<%= userlogin.email %> " required >
                     </div>
                     <div class="form-telefone">
                         <strong class="telefone">Telefone:</strong>
-                        <input type="tel" name="phone_number" id="input_telefone" placeholder="Seu número" value="<%= userlogin.phone_number %> ">
+                        <input type="tel" name="phone_number" id="input_telefone" placeholder="Seu número" value="<%= userlogin.phone_number %> " required >
                     </div>
                     <div class="form-genero">
                         <strong class="genero">Gênero:</strong>
-                        <input type="text" name="gender" id="input_genero" placeholder="Gênero F/M" value="<%= userlogin.gender %> ">
+                        <input type="text" name="gender" id="input_genero" placeholder="Gênero F/M" value="<%= userlogin.gender %> " required >
                     </div>
                     <div class="form-data">
                         <strong class="nascimento">Data de Nascimento:</strong>
-                        <input type="text" name="date_of_birth" id="intup_data-de-nascimento" placeholder="DD/MM/AAAA" value="<%= userlogin.date_of_birth %> ">
+                        <input type="text" name="date_of_birth" id="intup_data-de-nascimento" placeholder="DD/MM/AAAA" value="<%= userlogin.date_of_birth %> "  required >
                     </div>
                     <div class="form-senha">
                         <strong class="senha">Senha:</strong>
@@ -58,31 +58,31 @@
                     <H3>DADOS RESIDENCIAIS</H3>
                     <div class="form-cep">
                         <strong class="cep">CEP:</strong>
-                        <input type="text" name="zip_code" id="input_cep" placeholder="Digite apenas números" value="<%= userlogin.zip_code %> ">
+                        <input type="text" name="zip_code" id="input_cep" placeholder="Digite apenas números" value="<%= userlogin.zip_code %> "  required >
                     </div>
                     <div class="form-rua">
                         <strong class="rua">Nome da rua:</strong>
-                        <input type="text" name="street" id="input_rua" placeholder="Rua" value="<%= userlogin.street %> ">
+                        <input type="text" name="street" id="input_rua" placeholder="Rua" value="<%= userlogin.street %> " required >
                     </div>
                     <div class="form-complemento">
                         <strong class="complemento">Complemento:</strong>
-                        <input type="text" name="complement" id="input_complemento" placeholder="Complemento" value="<%= userlogin.complement %> ">
+                        <input type="text" name="complement" id="input_complemento" placeholder="Complemento" value="<%= userlogin.complement %> " required >
                     </div>
                     <div class="form-numero">
                         <strong class="numero">Número da casa:</strong>
-                        <input type="text" name="number" id="input_numero" placeholder="Digite o número" value="<%= userlogin.number %> ">
+                        <input type="text" name="number" id="input_numero" placeholder="Digite o número" value="<%= userlogin.number %> " required >
                     </div>
                     <div class="form-bairro">
                         <strong class="bairro">Bairro:</strong>
-                        <input type="text" name="neighborhood" id="intup_bairro" placeholder="Digite o bairro" value="<%= userlogin.neighborhood %> ">
+                        <input type="text" name="neighborhood" id="intup_bairro" placeholder="Digite o bairro" value="<%= userlogin.neighborhood %> " required >
                     </div>
                     <div class="form-cidade">
                         <strong class="cidade">Cidade:</strong>
-                        <input type="text" name="city" id="input_senha" placeholder="Cidade" value="<%= userlogin.city %> ">
+                        <input type="text" name="city" id="input_senha" placeholder="Cidade" value="<%= userlogin.city %> " required >
                     </div>
                     <div class="form-estado">
                         <strong class="estado">Estado:</strong>
-                        <input type="text" name="state" id="input_estado" placeholder="Estado" value="<%= userlogin.state %> ">
+                        <input type="text" name="state" id="input_estado" placeholder="Estado" value="<%= userlogin.state %> " required >
                     </div>
 
                     <div class="cta-cadastro">

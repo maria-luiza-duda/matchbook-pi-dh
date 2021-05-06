@@ -50,29 +50,24 @@ button  #logout-icon {
 
 .avata{
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     left: 40px;
     top: 1px;
+    border-radius: 50%;
+    color: #fff;
+
+    background-position: 50% 50%;
+    background-size: auto 100%;
+    border-style: solid;
 
 }
 
 .nomedousuario{
     position: absolute;
     height: 50px;
-    left: 130px;
-    top: -5px;
-
-    font-family: Roboto Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 65px;
-
-
-    display: flex;
-    align-items: center;
-    text-align: center;
+    left: 110px;
+    top: -3px;
 
     color: #000000;
 }
@@ -80,9 +75,9 @@ button  #logout-icon {
 section.styles article{
     position: absolute;
     width: 401px;
-    height: 582px;
+    height: 600px;
     left: 0px;
-    top: 62px;
+    top: 0px;
 
 
 }
@@ -94,16 +89,7 @@ section.styles h2{
     left: 34px;
     top: 70px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-
-
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
+    
 
     color: #000000;
 }
@@ -114,17 +100,6 @@ section.styles .n{
     height: 30px;
     left: 32px;
     top: 120px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-
-
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
 
     color: #000000;
 }
@@ -148,17 +123,6 @@ section.styles .telefone{
     left: 32px;
     top: 215px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-
-
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-
     color: #000000;
 }
 
@@ -181,17 +145,6 @@ section.styles .e{
     left: 32px;
     top: 315px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-
-
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-
     color: #000000;
 }
 
@@ -208,136 +161,52 @@ section.styles .numero{
 }
 
 
-
-
-
-
-.voltar{
-    display: flex;
-flex-direction: row;
-align-items: flex-start;
+.voltar button{
 padding: 5px 7px;
-
 position: absolute;
-width: 200px;
+width: 150px;
 height: 34px;
-left: 99px;
-top: 519.11px;
-
+left: 30px;
+top: 420px;
 background: #A1C8EB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 transform: rotate(-0.03deg);
 }
 
-.cta-cadastro button
+.cta-delete button
 {
-
-position: relative;
-width: 200px;
+position: absolute;
+width: 150px;
 height: 34px;
-left: 99px;
-top: 460px;
+left: 120px;
+top: 480px;
+background: #df2a1d7e;
+box-shadow: 0px 4px 4px rgba(22, 19, 19, 0.25);
+border-radius: 5px;
+transform: rotate(-0.03deg);
+}
+.meuperfil{
+    position: relative;
+    width: 311px;
+    height: 350px;
+    left: 657px;
+    top: 100px;
+    width: 311px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
-background: #A1C8EB;
+.update button{
+    position: absolute;
+    width: 150px;
+height: 34px;
+left:215px;
+top: 420px;
+    background: #A1C8EB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 transform: rotate(-0.03deg);
-
-}
-
-.botao{
-    
-
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    
-
-
-    
-
-    color: #000000;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-
-}
-
-form button {
-   
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    
-
-
-    
-
-    color: #000000;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-}
-
-.perfil{
-    position: relative;
-    width: 314px;
-    height: 470px;
-    left: 657px;
-    top: 100px;
-    
-    background: #FFFDFD;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
-
-
-.meuperfil{
-    
-    width: 311px;
-    height: px;
-    left: 657px;
-    top: 100px;
-    
-   
-    border-radius: 20px;
-}
-
-.info{
-    position: absolute;
-width: 232px;
-height: 56px;
-left: 721px;
-top: 450px;
-
-max-width: 20ch;
-overflow: hidden;
-/* text-overflow: ellipsis; */
-white-space: nowrap;
-
-font-family: Righteous;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 65px;
-/* or 271% */
-
-display: flex;
-align-items: center;
-
-color: #000000;
-}
-
-.update{
-    position: absolute;
-    width: 334px;
-    height: 70px;
-    left: 130px;
-    top: 550px;
-    
 }
 
 footer{
@@ -352,17 +221,13 @@ background: #75A3CD;
 
 footer .roda-pe{
     position: absolute;
-
 height: 24px;
 left: 500px;
 top: 10px;
-
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
-
-
 color: #000000;
 }
 
@@ -373,3 +238,4 @@ color: #000000;
         justify-content: center;
     }
 }
+
