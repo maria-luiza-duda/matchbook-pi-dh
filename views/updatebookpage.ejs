@@ -33,75 +33,74 @@
             </article>
             <article>
                     <div class="container-form">
-                        <form method="POST" action="/books/<%= userlogin.id %>?_method=">
-                            <input type="hidden" name="users_id" value="<%= userlogin.id %>">
-                            <div class="form-name">
-                               <strong class="name">Título:</strong>
-                                <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
-                            </div>   
+                        <% for(let book of listaBooks) { %>
                             
-                            <div class="form-author">
-                                <strong class="author">Autor (a):</strong>
-                                <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
-                            </div>
+                            <form action="/books" method="POST">
+                                <input type="hidden" name="users_id" value="<%= book.users_id %>">
+                               
+                                <div class="form-name">
+                                   <strong class="name">TÍTULO:</strong>
+                                    <input type="text" name="name" id="input_titulo" placeholder="Título do livro" value="<%= book.name %>"> 
+                                </div>   
                                 
-                            
-                            <div class="form-publisher">
-                                <strong class="publisher">Editora:</strong>
-                                <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
-                            </div>
-                                
-                            <div class="form-generes">
-                                <strong class="generes">Gênero:</strong>
-                                <select id="generes_id" name="generes_id">
-                                    <option value="cf5ba5ed-b57b-4296-9836-50b2d53c1d13">Administração, Negócios e Economia</option>
-                                    <option value="aea579f4-746f-4024-bd45-d77550676006">Arte, Cinema e Fotografia</option>
-                                    <option value="dfa39558-06de-422d-8dfb-baa3b21d5e29">Artesanato, Casa e Estilo de Vida</option>
-                                    <option value="504c18b9-5ba2-40b9-b2c5-cf38f52e598">Autoajuda</option>
-                                    <option value="3b2743b2-fb43-425d-842b-6e6e2cf4b577">Biografias e Histórias Reais</option>
-                                    <option value="88f04a1b-8f59-4127-aaa2-5646907f91e8">Ciências</option>
-                                    <option value="00a07cba-d743-4ea8-8d05-e87bd6edf5aa">Computação, Informática e Mídias Digitais</option>
-                                    <option value="b3852606-7fe7-4035-be3e-969b783ccfa9">Crônicas, Humor e Entretenimento</option>
-                                    <option value="fa2dc766-2e55-40b4-89b4-d65442cbbacc">Direito</option>
-                                    <option value="91efc378-a85b-4d52-a474-073c98781236">Erótico</option>
-                                    <option value="38028fb8-47d5-441c-ae4a-af285481f6ff">Esportes e Lazer</option>
-                                    <option value="ad7b081b-7c65-4356-aa11-fd5238436746">Fantasia, Horror e Ficção Científica</option>
-                                    <option value="2d7adbb7-7518-448f-b73a-f70c6b6117fe">Gastronomia e Culinária</option>
-                                    <option value="4434b143-c44d-4618-8487-a5a08f16a9c4">HQs, Mangás e Graphic Novels</option>
-                                    <option value="a4feba48-256f-4739-9c43-1a56844cb737">História</option>
-                                    <option value="ce857768-b82b-4d71-9d15-e3ca023055db">Infantil</option>
-                                    <option value="9545c569-fa96-41b2-909e-87bfff7dd387">Inglês e Outras Línguas</option>
-                                    <option value="2e0b588c-5277-432c-abd4-04a78ecf153e">Jovens e Adolescentes</option>
-                                    <option value="721a4a2b-5ea1-468c-8fea-a52107696c76">LGBT</option>
-                                    <option value="6c5469a3-d1fe-4955-85f2-c571a5c144ab">Literatura e Ficção</option>
-                                    <option value="09eb6607-78c6-4991-abaf-ac65bbed9a99">Medicina</option>
-                                    <option value="f3bfabae-1e90-448b-afc8-8edb3612ad3d">Policial, Suspense e Mistério</option>
-                                    <option value="096781bd-894b-4768-b4da-2f667692c389">Política</option>
-                                    <option value="b5c0e328-ce0d-4b0f-9416-ef110d162ae3">Religião e Espiritualidade</option>
-                                    <option value="c5a02f61-d1bb-460b-9b23-2a7abed06fde">Romance</option>
-                                    <option value="3abf8250-5681-4419-bc22-cf5f205e974f">Saúde e Família</option>
-                                    <option value="a2320d7b-9c7b-4704-a067-ef1d9f1d4275">Turismo e Viagem</option>
-                                </select>
-                            </div>
-                                
-                            <div class="form-description">
-                                <strong class="description">Sinopse:</strong>
-                                <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
-                            </div>
-
-                            <div class="input-url">
-                                <div id="upload-cover">
-                                    <img src="/img/upload.png" alt="logo" class="upload">
-                                    <input type="text" name="cover">
-                                    <p>Envie um enreço url com uma imagem da capa do seu livro</p>
+                                <div class="form-author">
+                                    <strong class="author">AUTOR (A):</strong>
+                                    <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)" value="<%= book.author %>" >
                                 </div>
-                            </div>
-
-                            <div class="cadastrar">
-                                <button class="botao" type="submit" >Atualizar livro</button>
-                            </div>
-
-                        </form>                  
+                                    
+                                
+                                <div class="form-publisher">
+                                    <strong class="publisher">EDITORA:</strong>
+                                    <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro" value="<%= book.name %>" >
+                                </div>
+                                    
+                                <div class="form-generes">
+                                    <strong class="generes">GÊNERO:</strong>
+                                    <select id="generes_id" name="generes_id">
+                                        <option value="cf5ba5ed-b57b-4296-9836-50b2d53c1d13">Administração, Negócios e Economia</option>
+                                        <option value="aea579f4-746f-4024-bd45-d77550676006">Arte, Cinema e Fotografia</option>
+                                        <option value="dfa39558-06de-422d-8dfb-baa3b21d5e29">Artesanato, Casa e Estilo de Vida</option>
+                                        <option value="504c18b9-5ba2-40b9-b2c5-cf38f52e598">Autoajuda</option>
+                                        <option value="3b2743b2-fb43-425d-842b-6e6e2cf4b577">Biografias e Histórias Reais</option>
+                                        <option value="88f04a1b-8f59-4127-aaa2-5646907f91e8">Ciências</option>
+                                        <option value="00a07cba-d743-4ea8-8d05-e87bd6edf5aa">Computação, Informática e Mídias Digitais</option>
+                                        <option value="b3852606-7fe7-4035-be3e-969b783ccfa9">Crônicas, Humor e Entretenimento</option>
+                                        <option value="fa2dc766-2e55-40b4-89b4-d65442cbbacc">Direito</option>
+                                        <option value="91efc378-a85b-4d52-a474-073c98781236">Erótico</option>
+                                        <option value="38028fb8-47d5-441c-ae4a-af285481f6ff">Esportes e Lazer</option>
+                                        <option value="ad7b081b-7c65-4356-aa11-fd5238436746">Fantasia, Horror e Ficção Científica</option>
+                                        <option value="2d7adbb7-7518-448f-b73a-f70c6b6117fe">Gastronomia e Culinária</option>
+                                        <option value="4434b143-c44d-4618-8487-a5a08f16a9c4">HQs, Mangás e Graphic Novels</option>
+                                        <option value="a4feba48-256f-4739-9c43-1a56844cb737">História</option>
+                                        <option value="ce857768-b82b-4d71-9d15-e3ca023055db">Infantil</option>
+                                        <option value="9545c569-fa96-41b2-909e-87bfff7dd387">Inglês e Outras Línguas</option>
+                                        <option value="2e0b588c-5277-432c-abd4-04a78ecf153e">Jovens e Adolescentes</option>
+                                        <option value="721a4a2b-5ea1-468c-8fea-a52107696c76">LGBT</option>
+                                        <option value="6c5469a3-d1fe-4955-85f2-c571a5c144ab">Literatura e Ficção</option>
+                                        <option value="09eb6607-78c6-4991-abaf-ac65bbed9a99">Medicina</option>
+                                        <option value="f3bfabae-1e90-448b-afc8-8edb3612ad3d">Policial, Suspense e Mistério</option>
+                                        <option value="096781bd-894b-4768-b4da-2f667692c389">Política</option>
+                                        <option value="b5c0e328-ce0d-4b0f-9416-ef110d162ae3">Religião e Espiritualidade</option>
+                                        <option value="c5a02f61-d1bb-460b-9b23-2a7abed06fde">Romance</option>
+                                        <option value="3abf8250-5681-4419-bc22-cf5f205e974f">Saúde e Família</option>
+                                        <option value="a2320d7b-9c7b-4704-a067-ef1d9f1d4275">Turismo e Viagem</option>
+                                    </select>
+                                </div>
+                                    
+                                <div class="form-description">
+                                    <strong class="description">SINOPSE:</strong>
+                                    <input type="text" name="description" id="input_description" placeholder="Sinopse do livro" value="<%= book.description %>" >
+                                </div>
+                                <div class="upload-cover">
+       
+                                    <input type="text" name="cover" id="input_cover" placeholder="upload" value="<%= book.cover %>"> 
+                                    
+                                </div>
+                                <div class="cta-cadastro">
+                                    <button class="botao" type="submit">CADASTRAR LIVRO</button>
+                                </div>
+                            </form>
+                            <% } %>
                     </div>
                 </article>
         </section>
