@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="/stylesheets/meuperfil.css">
+</head>
+
+<body>
+
+
+    <header class="conteiner">
+        <div class="incio">
+
+            <img src="/img/perfil.jpg" alt="fotodousuario" class="avata">
+            <h3 class="nomedousuario">Olá,
+                <%= userlogin.name %>
+            </h3>
+        </div>
+    </header>
+    <main>
+        <section class="styles">
+            <div class="container">
+                <article style="background-image: url('/img/image\ 2.png');">
+
+                    <h2>Configurações da conta</h2>
+                    <p class="n">NOME:</p>
+                    <div class="nome">
+                        <p>
+                            <%= userlogin.name %>
+                        </p>
+                    </div>
+                    <p class="telefone">Número:</p>
+                    <div class="numero">
+                        <p>
+                            <%= userlogin.phone_number %>
+                        </p>
+                    </div>
+                    <p class="e">E-Mail:</p>
+                    <div class="email">
+                        <p>
+                            <%= userlogin.email %>
+                        </p>
+                    </div>
+                   
+                </article>
+                <article>
+                   
+                        <div class="voltar">
+                            <button onclick="document.location='/'">VOLTAR</button>
+                        </div>
+
+                        <div class="cta-delete">               
+                            <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
+                                <button id="bt" class="delete" type="submit" onforminput="ConfirmDelete()">DELETAR USUARIO</button>
+                            </form>
+                        </div>
+                    
+                </article>
+               
+               
+               
+                
+                <div class="nada">
+                    <div class="perfil">
+                        <img src="/img/perfil.jpg" alt="foto" class="meuperfil">
+                    </div>
+                </div>
+                <div class="update">
+                    <button onclick="document.location='/users/updatepage'">ATUALIZAR DADOS</button>
+                </div>
+            
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteiner">
+            <div class="roda-pe">
+                <h3>Match Book © 2021. Todos os direitos reservados</h3>
+            </div>
+        </div>
+    </footer>
+
+   
+    
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

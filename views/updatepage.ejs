@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/updatepage.css">
+    <title>Match Book</title>
+</head>
+
+<body>
+    <header class="conteiner">
+        <div class="incio">
+            <img src="/img/logo.gif" alt="logo" class="logo">
+
+        </div>
+
+    </header>
+
+    <main>
+        <H2>ATUALIZE SEUS DADOS</H2>
+        <article>
+            <div class="container-form">
+                <form method="POST" action="/users/<%= userlogin.id %>?_method=PUT">
+                    <div class="form-name">
+                        <strong class="name">Nome:</strong>
+                        <input type="text" name="name" id="input_name" placeholder="Nome do usuario" value="<%= userlogin.name %> " required >
+                    </div>
+                    <div class="form-email">
+                        <strong class="email">Email:</strong>
+                        <input type="email" name="email" id="input_email" placeholder="Email do usuario" value="<%= userlogin.email %> " required >
+                    </div>
+                    <div class="form-telefone">
+                        <strong class="telefone">Telefone:</strong>
+                        <input type="tel" name="phone_number" id="input_telefone" placeholder="Seu número" value="<%= userlogin.phone_number %> " required >
+                    </div>
+                    <div class="form-genero">
+                        <strong class="genero">Gênero:</strong>
+                        <input type="text" name="gender" id="input_genero" placeholder="Gênero F/M" value="<%= userlogin.gender %> " required >
+                    </div>
+                    <div class="form-data">
+                        <strong class="nascimento">Data de Nascimento:</strong>
+                        <input type="text" name="date_of_birth" id="intup_data-de-nascimento" placeholder="DD/MM/AAAA" value="<%= userlogin.date_of_birth %> "  required >
+                    </div>
+                    <div class="form-senha">
+                        <strong class="senha">Senha:</strong>
+                        <input type="password" name="password" id="input_senha" placeholder="Senha">
+                    </div>
+                    <div class="form-confirmarsenha">
+                        <strong class="confirmarpassword">Confirmar:</strong>
+                        <input type="password" name="confirmarpassword" id="input_confirmarsenha" placeholder="Confirmar senha">
+                    </div>
+
+                    <H3>DADOS RESIDENCIAIS</H3>
+                    <div class="form-cep">
+                        <strong class="cep">CEP:</strong>
+                        <input type="text" name="zip_code" id="input_cep" placeholder="Digite apenas números" value="<%= userlogin.zip_code %> "  required >
+                    </div>
+                    <div class="form-rua">
+                        <strong class="rua">Nome da rua:</strong>
+                        <input type="text" name="street" id="input_rua" placeholder="Rua" value="<%= userlogin.street %> " required >
+                    </div>
+                    <div class="form-complemento">
+                        <strong class="complemento">Complemento:</strong>
+                        <input type="text" name="complement" id="input_complemento" placeholder="Complemento" value="<%= userlogin.complement %> " required >
+                    </div>
+                    <div class="form-numero">
+                        <strong class="numero">Número da casa:</strong>
+                        <input type="text" name="number" id="input_numero" placeholder="Digite o número" value="<%= userlogin.number %> " required >
+                    </div>
+                    <div class="form-bairro">
+                        <strong class="bairro">Bairro:</strong>
+                        <input type="text" name="neighborhood" id="intup_bairro" placeholder="Digite o bairro" value="<%= userlogin.neighborhood %> " required >
+                    </div>
+                    <div class="form-cidade">
+                        <strong class="cidade">Cidade:</strong>
+                        <input type="text" name="city" id="input_senha" placeholder="Cidade" value="<%= userlogin.city %> " required >
+                    </div>
+                    <div class="form-estado">
+                        <strong class="estado">Estado:</strong>
+                        <input type="text" name="state" id="input_estado" placeholder="Estado" value="<%= userlogin.state %> " required >
+                    </div>
+
+                    <div class="cta-cadastro">
+                        <button class="botao" type="submit">ATUALIZAR</button>
+                    </div>
+                </form>
+
+            </div>
+        </article>
+
+
+
+        </div>
+
+        </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="conteiner">
+            <div class="roda-pe">
+                <h3>Match Book © 2021. Todos os direitos reservados</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/teste.js"></script>
+
+</body>
+
+</html>

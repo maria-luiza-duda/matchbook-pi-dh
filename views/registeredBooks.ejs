@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/books.css">
+    <title>Meus Livros</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <P>MatchBook</P>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="principal">
+            <div class="container">
+                <article class="board" style="background-image: url('/img/wrap-submain.png');">
+                    <div>
+                        <button type="create" onclick="document.location='/books/registerbook'">Adicionar Livro</button>
+                    </div>
+                    <div class="livro-img" style="background-image: url('/img/livros.png');">
+                    </div>
+                    <div class="back">
+                       <button>Voltar</button>
+                    </div>
+                </article>
+                <article class="exibithion">
+                    <% for(let book of listaBooks) { %>
+                        <div class="card">
+                            <div class="cover" style="background-image: url(' <%= book.cover %> ');"></div>
+                            <div class="info">
+                                <h4>
+                                    <%= book.name %>    
+                                </h4>
+                            </div>
+                            <button onclick="document.location='/books<%= book.id %>'" >Update</button>
+                            <form method="POST" action="/books/<%= book.id %>?_method=DELETE">
+                                <button>delete</button>
+                            </form>
+                        </div>
+                        <% } %>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Match Book © 2021. Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+
+</html>
