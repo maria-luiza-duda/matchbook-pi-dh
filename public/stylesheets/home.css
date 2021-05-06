@@ -27,9 +27,8 @@ header {
   justify-content: space-between;
   background: #AA6DC7;
 }
-.logo{
-  width: 60px;
-  height: 60px;
+.logo {
+  height: 8vh;
 }
 
 header .container {
