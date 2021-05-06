@@ -71,7 +71,7 @@ const booksController = {
             where: { id }
         });
 
-        return response.json(deletedBook);
+        return response.redirect('/books/mybooks');
 
     },
 

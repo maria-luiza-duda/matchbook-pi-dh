@@ -39,9 +39,8 @@
                                     <%= book.name %>    
                                 </h4>
                             </div>
-                            <button onclick="document.location='/books<%= book.id %>'" >Update</button>
                             <form method="POST" action="/books/<%= book.id %>?_method=DELETE">
-                                <button>delete</button>
+                                <button class="bt-delete">Delete</button>
                             </form>
                         </div>
                         <% } %>
