@@ -16,6 +16,18 @@ const booksController = {
         return response.render('registerbook', { userlogin:request.session.usersOn })
     },
 
+    updatedBook: async (request, response) =>{
+        const id = request.params
+
+        const updatebook = await Book.findOne({
+            where: { id}
+        });
+        
+
+        return response.json(updatebook)
+    },
+
+
     create: async (request, response) => {
         let { name, author, description, publisher, generes_id, cover, users_id } = request.body;
 
@@ -30,7 +42,7 @@ const booksController = {
             cover
         });
 
-        return response.json(newBook);
+        return response.redirect('/books/mybooks');
     },
     update: async (request, response) => {
         let { id } = request.params;
@@ -53,7 +65,7 @@ const booksController = {
 
     delete: async (request, response) => {
 
-        let { id } = request.params;
+        let { id } = request.params
 
         const deletedBook = await Book.destroy({
             where: { id }
@@ -80,12 +92,15 @@ const booksController = {
 
     show: async (request, response) => {
         const { id } = request.session.usersOn;
+        
 
         const booksforUser = await Book.findAll({
             where: {
                 users_id: id
             }
         });
+
+       
 
         return response.render('registeredBooks', { listaBooks: booksforUser });
     }

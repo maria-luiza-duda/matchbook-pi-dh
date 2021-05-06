@@ -7,7 +7,7 @@ const ValidarCadasto = require('../middlewares/ValidarCadastro');
 /* GET users listing. */
 router.get('/', usersController.index);
 
-router.get('/mybooks', usersController.mybooks);
+router.get('/registeredBooks', usersController.registeredBooks);
 
 router.get('/registeruser', usersController.registeruser);
 router.get('/myprofile', auth, usersController.myprofile);

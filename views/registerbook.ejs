@@ -28,31 +28,31 @@
                         <h2>CADASTRE UM LIVRO</h2>
                 </div>
                 <div class="container-btnvoltar">
-                    <button onclick="document.location='../'">Voltar</button>
+                    <button onclick="document.location='books/registerbook'">Voltar</button>
                 </div>
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books" method="POST">
+                        <form action="/books" method="POST" >
                             <input type="hidden" name="users_id" value="<%= userlogin.id %>">
                             <div class="form-name">
-                               <strong class="name">TÍTULO:</strong>
+                               <strong class="name">Título:</strong>
                                 <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
                             </div>   
                             
                             <div class="form-author">
-                                <strong class="author">AUTOR (A):</strong>
+                                <strong class="author">Autor (a):</strong>
                                 <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
                             </div>
                                 
                             
                             <div class="form-publisher">
-                                <strong class="publisher">EDITORA:</strong>
+                                <strong class="publisher">Editora:</strong>
                                 <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
                             </div>
                                 
                             <div class="form-generes">
-                                <strong class="generes">GÊNERO:</strong>
+                                <strong class="generes">Gênero:</strong>
                                 <select id="generes_id" name="generes_id">
                                     <option value="cf5ba5ed-b57b-4296-9836-50b2d53c1d13">Administração, Negócios e Economia</option>
                                     <option value="aea579f4-746f-4024-bd45-d77550676006">Arte, Cinema e Fotografia</option>
@@ -85,31 +85,36 @@
                             </div>
                                 
                             <div class="form-description">
-                                <strong class="description">SINOPSE:</strong>
+                                <strong class="description">Sinopse:</strong>
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
                             </div>
-                            <div class="upload-cover">
-   
-                                <input type="text" name="cover" id="input_cover" placeholder="upload" multiple> 
-                                
+
+                            <div class="input-url">
+                                <div id="upload-cover">
+                                    <img src="/img/upload.png" alt="logo" class="upload">
+                                    <input type="text" name="cover">
+                                    <p>Envie um enreço url com uma imagem da capa do seu livro</p>
+                                </div>
                             </div>
-                            <div class="cta-cadastro">
-                                <button class="botao" type="submit">CADASTRAR LIVRO</button>
+
+                            <div class="cadastrar">
+                                <button class="botao" type="submit" >Cadastrar livro</button>
                             </div>
+
                         </form>                  
                     </div>
                 </article>
         </section>
     </main>
 
+</body>
+
     <footer>
-        <div class="container">
+        <div class="conteiner">
             <div class="roda-pe">
                 <h3>Match Book © 2021. Todos os direitos reservados</h3>
             </div>
         </div>
     </footer>
-
-</body>
 
 </html>

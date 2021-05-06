@@ -204,7 +204,9 @@ form button{
 
 }
 
+
 form button:hover{
+
     transition: 0.3s;
     color: white;
     border: 10px;
@@ -243,3 +245,4 @@ footer .roda-pe {
 
 }
 /*  FIM DO FOOTER  */
+

@@ -6,9 +6,9 @@ var router = express.Router();
 const bookValidate = require('../middlewares/bookValidate')
 /* GET users listing. */
 router.get('/', booksController.index);
-router.get('/list', auth, booksController.show);
+router.get('/mybooks',  booksController.show);
+router.get('a/:id',  booksController.updatedBook);
 router.get('/registerbook', auth, booksController.registerbook);
-
 router.post('/', bookValidate, booksController.create);
 router.put('/:id', booksController.update);
 router.delete('/:id',booksController.delete);
