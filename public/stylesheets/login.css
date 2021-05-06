@@ -30,7 +30,7 @@ header {
 }
 
 .logo{
-  width: 6vw;
+  
   height: 7vh;
 }
 
@@ -57,7 +57,7 @@ header .container {
 header button{
   position: fixed;
   width: 7vw;
-  height: 3vh;
+  height: 7vh;
   font-family: Rhodium Libre;
   font-style: normal;
   font-weight: normal;
