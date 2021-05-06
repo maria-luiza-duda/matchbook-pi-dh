@@ -140,10 +140,17 @@ form button{
 
 }
 
-.botoes .btn-logar button:hover{
+ button:hover{
     transition: 0.3s;
     color: white;
     border: 10px;
     border: white;
 
+  }
+
+  
+  input:hover{
+      color: white;
+      background-color: white;
+      border: none;
   }
