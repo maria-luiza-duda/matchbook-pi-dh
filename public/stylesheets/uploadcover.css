@@ -29,6 +29,18 @@ header {
   
   }
 
+ header form {
+    position: absolute;
+    margin: -40px 1200px;
+}
+
+button  #logout-icon {
+    position: absolute;
+    height: 25px;
+    width: 20px;
+    background-color: none;
+}
+
 .container .inicio{
     position: absolute;
     width: 1318px;
