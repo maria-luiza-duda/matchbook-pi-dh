@@ -23,7 +23,6 @@ const usersController = {
         return res.render('myprofile', { userlogin: req.session.usersOn })
     },
 
-
     login: (req, res) => {
         return res.render('login')
     },
