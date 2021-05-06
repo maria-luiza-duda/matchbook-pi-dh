@@ -3,5 +3,5 @@
 Match Book
 
 
-![Logo Match Book](./images/logo.png)
+![Logo Match Book](./public/images/logo.png)
 

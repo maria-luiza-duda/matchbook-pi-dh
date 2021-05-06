@@ -1,34 +1,44 @@
-
 const { request, response } = require('express');
 const { User, Book, sequelize } = require('../models/');
-const { v4:uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 
 
 const booksController = {
-    index: async (request, response) => {
+    index: async(request, response) => {
         let books = await Book.findAll();
 
         return response.render('mybooks', { listaBooks: books });
     },
-    
-    registerbook: (request, response) =>{
-        
-        return response.render('registerbook', { userlogin:request.session.usersOn })
+
+    indexmt: async(request, response) => {
+        let books = await Book.findAll();
+
+        return response.render('matchbook', { listaBooks: books });
     },
 
-    updatedBook: async (request, response) =>{
+    registerbook: (request, response) => {
+
+        return response.render('registerbook', { userlogin: request.session.usersOn })
+    },
+
+    matchbook: (request, response) => {
+
+        return response.render('matchbook', { userlogin: request.session.usersOn })
+    },
+
+    updatedBook: async(request, response) => {
         const id = request.params
 
         const updatebook = await Book.findOne({
-            where: { id}
+            where: { id }
         });
-        
+
 
         return response.json(updatebook)
     },
 
 
-    create: async (request, response) => {
+    create: async(request, response) => {
         let { name, author, description, publisher, generes_id, cover, users_id } = request.body;
 
         let newBook = await Book.create({
@@ -44,7 +54,7 @@ const booksController = {
 
         return response.redirect('/books/mybooks');
     },
-    update: async (request, response) => {
+    update: async(request, response) => {
         let { id } = request.params;
         let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 
@@ -63,7 +73,7 @@ const booksController = {
         return response.send(updatedBook);
     },
 
-    delete: async (request, response) => {
+    delete: async(request, response) => {
 
         let { id } = request.params
 
@@ -90,9 +100,9 @@ const booksController = {
         }
     },
 
-    show: async (request, response) => {
+    show: async(request, response) => {
         const { id } = request.session.usersOn;
-        
+
 
         const booksforUser = await Book.findAll({
             where: {
@@ -100,7 +110,7 @@ const booksController = {
             }
         });
 
-       
+
 
         return response.render('registeredBooks', { listaBooks: booksforUser });
     }
