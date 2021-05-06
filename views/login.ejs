@@ -2,21 +2,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
- 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/stylesheets/template.css">
-        <link rel="stylesheet" href="/stylesheets/login.css">
-        <link REL="SHORTCUT ICON" HREF="/img/logo.ico"  type="image/x-icon">
-        <title>Match Book</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/template.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link REL="SHORTCUT ICON" HREF="/img/logo.ico" type="image/x-icon">
+    <title>Match Book</title>
+</head>
 
 <body>
-    <%- include('partials/header_login') %>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.gif" alt="logo" class="logo">
+            </div>
+            <p class="idioma">PORTUGUÊS(BRASIL)</p>
+            <div class="btn-home">
+                <button onclick="document.location='/'">HOME</button>
+            </div>
+        </div>
+    </header>
     <main>
-        <h2><strong>VAMOS COMEÇAR</strong></h2>
+        <div class="conteiner-main">
+            <h2><strong>VAMOS COMEÇAR</strong></h2>
             <span><strong>Ao clicar em Entrar voce concorda com os nossos termos.</strong></span>
             <div class="form_login">
                 <form action="/users/login" method="POST">
@@ -24,11 +35,18 @@
                     <input type="email" name="email" id="input_email" placeholder="Email do usuario">
                     <strong class="senha">Senha:</strong>
                     <input type="password" name="password" id="input_senha" placeholder="Senha">
-                    <button class="botao" type="submit" ><strong>ENTRAR</strong></button>
+                    <button class="botao" type="submit"><strong>ENTRAR</strong></button>
                 </form>
             </div>
+        </div>
     </main>
-    <%- include('partials/footer') %>
+    <footer>
+        <div class="conteiner">
+            <div class="roda-pe">
+                <h3>Match Book © 2021. Todos os direitos reservados</h3>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
