@@ -94,15 +94,14 @@ main{
 
 main h2 {
   position: absolute;
-  width: 188px;
-  height: 32px;
-  left: calc(50% - 188px/2);
-  top: 110px;
+  width: 15vw;
+  height: 14vh;
+  left: calc(50vw - 15vw/2);
+  top: 15vh;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px; 
+  font-size: 4vh;
   
   align-items: center;
   text-align: center;
@@ -113,15 +112,14 @@ main h2 {
 
 main span {
   position: absolute;
-  width: 384px;
-  height: 45px;
-  left: calc(50% - 384px/2);
-  top: 180px;
+  width: 30vw;
+  height: 19.6vh;
+  left: calc(50vw - 30vw/2);
+  top: 25vh;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 3vh;
      
   align-items: center;
   text-align: center;
@@ -132,15 +130,15 @@ main span {
 
 .email{
   position: absolute;
-  width: 57px;
-  height: 46px;
-  left: calc(50% - 370px/2);
-  top: 240px;
+  width: 8.5vw;
+  height: 8vh;
+  left: calc(50vw - 29.25vw/2);
+  top: 35vh;
 
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 4vh;
   line-height: 65px;
 
   display: flex;
@@ -153,10 +151,10 @@ main span {
 
 #input_email{
   position: absolute;
-  width: 370px;
-  height: 56px;
-  left: calc(50% - 370px/2);
-  top: 290px;
+  width: 29.25vw;
+  height: 9.87vh;
+  left: calc(50vw - 29.25vw/2);
+  top: 44vh;
   
   background: #DEDEDE;
   border-radius: 10px;
@@ -164,15 +162,15 @@ main span {
 
 .senha{
   position: absolute;
-  width: 298px;
-  height: 46px;
-  left: calc(50% - 370px/2);
-  top: 360px;
+  width: 8.5vw;
+    height: 8vh;
+    left: calc(50vw - 29.25vw/2);
+    top: 56vh;
 
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 4vh;
   line-height: 65px;
   /* or 271% */
   
@@ -186,10 +184,10 @@ main span {
 
 #input_senha{
   position: absolute;
-  width: 370px;
-  height: 56px;
-  left: calc(50% - 370px/2);
-  top: 410px;
+  width: 29.25vw;
+    height: 9.87vh;
+    left: calc(50vw - 29.25vw/2);
+    top: 65vh;
 
   background: #DEDEDE;
   border-radius: 10px;
@@ -197,10 +195,10 @@ main span {
 
 form button{
   position: absolute;
-  width: 130px;
-  height: 34px;
-  left: calc(50% - 130px/2);
-  top: 500px;
+  width: 10.32vw;
+    height: 6.23vh;
+    left: calc(50vw - 10.32vw/2);
+    top: 81vh;
 
   background: #A1C8EB;
   border: 1px solid rgba(0, 0, 0, 0.33);
@@ -209,7 +207,7 @@ form button{
   font-family: Roboto Mono;
   font-style: normal;
   font-weight: 300px;
-  font-size: 18px;
+  font-size: 3vh;
   line-height: 24px;
   text-align: center;
   color: #000000;
@@ -242,6 +240,6 @@ footer  h3{
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5vh;
+  font-size: 2vh;
   color: black;
 }
