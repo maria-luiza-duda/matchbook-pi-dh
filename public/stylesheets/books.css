@@ -21,6 +21,18 @@ header {
     background: #AA6DC7;
 }
 
+header form {
+    position: absolute;
+    margin: -40px 1200px;
+}
+
+button  #logout-icon {
+    position: absolute;
+    height: 25px;
+    width: 20px;
+    background-color: none;
+}
+
 section.principal .container {
     display: flex;
     padding: 0;
