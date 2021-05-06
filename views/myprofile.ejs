@@ -15,7 +15,7 @@
     <header class="conteiner">
         <div class="incio">
 
-            <img src="/img/avata.png" alt="fotodousuario" class="avata">
+            <img src="/img/perfil.jpg" alt="fotodousuario" class="avata">
             <h3 class="nomedousuario">Olá,
                 <%= userlogin.name %>
             </h3>
@@ -47,22 +47,32 @@
                     </div>
                    
                 </article>
-                
-                <div class="cta-cadastro">               
-                    <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
-                        <button id="bt" class="botao" type="submit" onforminput="ConfirmDelete()"> Deletar Usuario</button>
-                    </form>
-                </div>
+                <article>
+                   
+                        <div class="voltar">
+                            <button onclick="document.location='/'">VOLTAR</button>
+                        </div>
+
+                        <div class="cta-delete">               
+                            <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
+                                <button id="bt" class="delete" type="submit" onforminput="ConfirmDelete()">DELETAR USUARIO</button>
+                            </form>
+                        </div>
+                    
+                </article>
                
-                <div class="perfil">
-                    <img src="/img/perfil 1.png" alt="foto" class="meuperfil">
+               
+               
+                
+                <div class="nada">
+                    <div class="perfil">
+                        <img src="/img/perfil.jpg" alt="foto" class="meuperfil">
+                    </div>
                 </div>
                 <div class="update">
-                    <p><a href="/users/updatepage">Atualize seus dados</a></p>
+                    <button onclick="document.location='/users/updatepage'">ATUALIZAR DADOS</button>
                 </div>
-                <p class="info">
-                    <%= userlogin.name %>
-                </p>
+            
             </div>
 
         </section>
@@ -75,6 +85,9 @@
             </div>
         </div>
     </footer>
+
+   
+    
     <script src="/js/main.js"></script>
 </body>
 
