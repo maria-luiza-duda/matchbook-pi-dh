@@ -18,13 +18,12 @@
     <main>
         <section class="principal">
             <div class="container">
-                <article class="board" style="background-image: url('./img/wrap-submain.png');">
-                    <nav class="navigation">
-                        <a href="">MATCHES</a>
-                        <a href="">LIVROS</a>
-                        <a href="">MEU PERFIL</a>
-                    </nav>
-                    <div class="livro-img" style="background-image: url('./img/livros.png');">
+                <article class="board" style="background-image: url('/img/wrap-submain.png');">
+                    <div>
+      <button type="create" onclick="document.location='/books/registerbook'">Adicionar Livro</button>
+      <button>Update Livro</button>
+                    </div>
+                    <div class="livro-img" style="background-image: url('/img/livros.png');">
                     </div>
                     <div class="back">
                         <a href="">VOLTAR</a>
@@ -38,13 +37,13 @@
                                 <h4> <%= book.name %> </h4>
                             </div>
                         </div>
-                        <% } %> 
+                    <% } %>
                 </article>
             </div>
         </section>
     </main>
     <footer>
-        <div>
+        <div class="container">
             <p>Match Book © 2021. Todos os direitos reservados</p>
         </div>
     </footer>

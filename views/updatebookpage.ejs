@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/stylesheets/registerbook.css">
-    <title>Match Book</title>
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/registerbook.css">
+        <title>Match Book</title>
+    </head>
 <body>
-    <header class="container">
-        <div class="inicio">
-            <p class="olaUsuario"></p>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.gif" alt="logo" class="logo">
+            </div>
         </div>
     </header>
     <main>
@@ -21,38 +21,39 @@
                 <div class="container-action">
                     <img src="/img/bibliobook.png" alt="logo" class="background">
                         <nav>
-                            <button class="botao-matches" type="menu">MATCHES</button>
-                            <button class="botao-livros" type="menu">LIVROS</button>
-                            <button class="botao-perfil" type="menu">MEU PERFIL</button>
+                            <button class="botao-matches" type="menu" href="views/">MATCHES</button>
+                            <button class="botao-livros" type="menu" onclick="document.location='users/mybooks'">LIVROS</button>
+                            <button class="botao-perfil" type="menu" href="views/">MEU PERFIL</button>
                         </nav> 
-                        <h2>CADASTRE UM LIVRO</h2>
+                        <h2>ATUALIZAR LIVRO</h2>
                 </div>
                 <div class="container-btnvoltar">
-                    <button class="voltar" type="button">VOLTAR</button>
+                    <button onclick="document.location='books/registerbook'">Voltar</button>
                 </div>
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books" method="POST">
+                        <form method="POST" action="/books/<%= userlogin.id %>?_method=">
+                            <input type="hidden" name="users_id" value="<%= userlogin.id %>">
                             <div class="form-name">
-                               <strong class="name">TÍTULO:</strong>
+                               <strong class="name">Título:</strong>
                                 <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
                             </div>   
                             
                             <div class="form-author">
-                                <strong class="author">AUTOR (A):</strong>
+                                <strong class="author">Autor (a):</strong>
                                 <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
                             </div>
                                 
                             
                             <div class="form-publisher">
-                                <strong class="publisher">EDITORA:</strong>
+                                <strong class="publisher">Editora:</strong>
                                 <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
                             </div>
                                 
                             <div class="form-generes">
-                                <strong class="generes">GÊNERO:</strong>
-                                <select id="generes" name="generes">
+                                <strong class="generes">Gênero:</strong>
+                                <select id="generes_id" name="generes_id">
                                     <option value="cf5ba5ed-b57b-4296-9836-50b2d53c1d13">Administração, Negócios e Economia</option>
                                     <option value="aea579f4-746f-4024-bd45-d77550676006">Arte, Cinema e Fotografia</option>
                                     <option value="dfa39558-06de-422d-8dfb-baa3b21d5e29">Artesanato, Casa e Estilo de Vida</option>
@@ -84,42 +85,36 @@
                             </div>
                                 
                             <div class="form-description">
-                                <strong class="description">SINOPSE:</strong>
+                                <strong class="description">Sinopse:</strong>
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
                             </div>
 
-                            <div class="cta-cadastro">
-                                <button class="botao" type="submit">CADASTRAR LIVRO</button>
-                            </div>
-                        </form> 
-                        
-                    </div>
-
-                    <div class="form-cover">
-                        <form>
-                            <div class="upload-cover">
-                                <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
-                                <img src="/img/upload.png" alt="upload" class="icon">
-                                <div class="btn-upload">
-                                <input type="file" name="cover" id="input_cover" placeholder="upload" multiple> 
+                            <div class="input-url">
+                                <div id="upload-cover">
+                                    <img src="/img/upload.png" alt="logo" class="upload">
+                                    <input type="text" name="cover">
+                                    <p>Envie um enreço url com uma imagem da capa do seu livro</p>
                                 </div>
                             </div>
-                            
-                        </form>
+
+                            <div class="cadastrar">
+                                <button class="botao" type="submit" >Atualizar livro</button>
+                            </div>
+
+                        </form>                  
                     </div>
-                        
                 </article>
         </section>
     </main>
 
+</body>
+
     <footer>
-        <div class="container">
+        <div class="conteiner">
             <div class="roda-pe">
                 <h3>Match Book © 2021. Todos os direitos reservados</h3>
             </div>
         </div>
     </footer>
-
-</body>
 
 </html>
