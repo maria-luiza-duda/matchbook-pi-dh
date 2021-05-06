@@ -32,6 +32,15 @@ const usersController = {
     login: (req, res) => {
         return res.render('login')
     },
+
+    logout: (req, res) => {
+        req.session.destroy(function(err) {
+        console.log('Destroyed session')
+     })
+        res.redirect('/users/login');
+
+    },
+
     updatepage: (req, res) => {
         return res.render('updatepage', { userlogin: req.session.usersOn })
     },
