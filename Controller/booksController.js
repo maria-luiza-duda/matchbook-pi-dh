@@ -70,7 +70,7 @@ const booksController = {
             where: { id }
         })
 
-        return response.send(updatedBook);
+        return response.redirect('/books/mybooks');
     },
 
     delete: async(request, response) => {
