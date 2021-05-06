@@ -33,7 +33,6 @@ const usersController = {
         console.log('Destroyed session')
      })
         res.redirect('/users/login');
-
     },
 
     updatepage: (req, res) => {
