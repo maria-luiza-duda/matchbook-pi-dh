@@ -87,18 +87,10 @@
 
             <div id="id02" class="modal-save">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px" width="25px"></span>
-                        <p id="principal">It's a match!</p>
-                    </div>                                    
-                                    
-                    <div class="logo-gif">
-                        <img src="/img/gifmatch.gif" alt="gifmatch" class="logo">
+                    <div class="modal-header-save">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px" width="25px"></span>
+                        <p id="principal">Você salvou este livro!</p>
                     </div>
-
-                    <form method="GET" action="/books/<%= listaBooks.id %>?_method=GET">
-                        <button id="bt" class="enviarMensagem" type="submit" onforminput="enviarMensagem()"><p>Envie uma mensagem...</p><br><img src="/img/wpp.png" height="40px" width="40px"></button>
-                    </form>
        
                 </div>
                            
