@@ -22,6 +22,20 @@ body {
     margin: 0 auto;
 }
 
+header form button{
+    position: absolute;
+    margin: -40px 1200px;
+    background-color: #AA6DC7;
+    border-color: transparent;
+}
+
+#logout-icon {
+    position: absolute;
+    height: 25px;
+    width: 20px;
+    background-color: none;
+    stroke-opacity:initial;
+}
 
 
 header {
@@ -71,14 +85,12 @@ section.styles article{
 }
 
 section.styles h2{
-    position: absolute;
-    width: 401px;
-    height: 34px;
+    position:absolute;
+    width: 300px;
+    height: 20px;
     left: 34px;
     top: 70px;
-
-    
-
+    font-size: 20px;
     color: #000000;
 }
 
@@ -102,6 +114,8 @@ section.styles .nome{
     background: #FFFEFE;
     border: 1px solid rgba(0, 0, 0, 0.24);
     box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 section.styles .telefone{
@@ -124,6 +138,8 @@ section.styles .email{
     background: #FFFEFE;
     border: 1px solid rgba(0, 0, 0, 0.24);
     box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 section.styles .e{
@@ -132,7 +148,7 @@ section.styles .e{
     height: 30px;
     left: 32px;
     top: 315px;
-
+    
     color: #000000;
 }
 
@@ -146,6 +162,8 @@ section.styles .numero{
     background: #FFFEFE;
     border: 1px solid rgba(0, 0, 0, 0.24);
     box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -155,14 +173,14 @@ position: absolute;
 width: 150px;
 height: 34px;
 left: 30px;
-top: 420px;
+top: 430px;
 background: #A1C8EB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 transform: rotate(-0.03deg);
 }
 
-.cta-delete button
+.w3-container button
 {
 position: absolute;
 width: 150px;
@@ -190,8 +208,8 @@ transform: rotate(-0.03deg);
     width: 150px;
 height: 34px;
 left:215px;
-top: 420px;
-    background: #A1C8EB;
+top: 430px;
+background: #A1C8EB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 transform: rotate(-0.03deg);
@@ -227,3 +245,43 @@ color: #000000;
     }
 }
 
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .modal-content {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(117, 163, 205, 0.72) 0%, rgba(193, 134, 221, 0.56) 77.6%);
+    
+    top: 250px;
+    left: 450px;
+    width: 500px;
+    padding: 50px;
+    flex-direction: row;
+}
+
+.modal .modal-content .modal-header {
+    color: #fff;
+    
+    justify-content: center;
+}
+
+.modal .modal-content  button{
+    position: absolute;
+    width: 150px;
+height: 34px;
+
+    background: #A1C8EB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+transform: rotate(-0.03deg);
+}

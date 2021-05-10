@@ -32,6 +32,14 @@ const usersController = {
     login: (req, res) => {
         return res.render('login')
     },
+
+    logout: (req, res) => {
+        req.session.destroy(function(err) {
+        console.log('Destroyed session')
+     })
+        res.redirect('/users/login');
+    },
+
     updatepage: (req, res) => {
         return res.render('updatepage', { userlogin: req.session.usersOn })
     },
@@ -45,7 +53,7 @@ const usersController = {
 
         if (users && bcrypt.compareSync(password, users.password)) {
             req.session.usersOn = users;
-            return res.redirect('/users/myprofile');
+            return res.redirect('/books/matchbook');
         } else {
             return res.redirect('/users/login');
         }
@@ -135,19 +143,20 @@ const usersController = {
 
     delete: async(req, res) => {
         const { id } = req.session.usersOn
-        
+
         const deletedBook = await Book.destroy({
-            where: { users_id: id  
+            where: {
+                users_id: id
             }
         });
         const Users = await User.destroy({
             where: { id }
         });
-        
+
         return res.json(Users);
     }
 
-    
+
 
 }
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/stylesheets/matchbook.css">
+    <link rel="stylesheet" href="/stylesheets/mt_cards.css">
+    <link REL="SHORTCUT ICON" HREF="/img/logo.ico" type="image/x-icon">
+    <title>Match Book</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <video src="/img/vheader_matchbook.mp4" autoplay="true" loop="true" muted class="logo"></video>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col col-1">
+                <div class="container-action">
+                    <article>
+                        <img src="/img/bg_menu.jpeg" alt="logo" class="background">
+                        <video src="/img/vbg_matchbook1.mp4" autoplay="true" loop="true" muted class="background"></video>
+                        <nav>
+                            <button class="botao-matches" type="menu" onclick="document.location='../users/mymatches'">MEUS MATCHES</button>
+                            <button class="botao-livros" type="menu" onclick="document.location='./mybooks'">LIVROS</button>
+                            <button class="botao-perfil" type="menu" onclick="document.location='../users/myprofile'">MEU PERFIL</button>
+                        </nav>
+                    </article>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="tinder">
+                    <div class="tinder--status">
+                        <i class="fa fa-remove"></i>
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="tinder--cards">
+                        <% for(let book of listaBooks) { %>
+                            <div class="tinder--card" style="background-image: url('<%= book.cover %>');">
+                                <div class="book-info">
+                                    <div>
+                                        <span><%= book.name %></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="tinder--buttons">
+                        <button id="nope"><i class="fa fa-remove"></i></button>
+                        <button id="love"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Match Book © 2021. Todos os direitos reservados</h3>
+    </footer>
+
+    <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
+    <script src="/js/mt_cards.js"></script>
+</body>
+
+</html>

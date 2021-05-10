@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil</title>
     <link rel="stylesheet" href="/stylesheets/meuperfil.css">
+    <link REL="SHORTCUT ICON" HREF="/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -20,6 +21,11 @@
                 <%= userlogin.name %>
             </h3>
         </div>
+        
+        <form action="/users/login">
+            <button type="submit" id="logout-icon"><img src="/img/logout.png" height="20px" width="18px"></button>
+        </form>
+
     </header>
     <main>
         <section class="styles">
@@ -47,19 +53,21 @@
                     </div>
                    
                 </article>
-                <article>
+               
                    
-                        <div class="voltar">
-                            <button onclick="document.location='/'">VOLTAR</button>
-                        </div>
+                    <article>
 
-                        <div class="cta-delete">               
-                            <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
-                                <button id="bt" class="delete" type="submit" onforminput="ConfirmDelete()">DELETAR USUARIO</button>
-                            </form>
+                        <div class="voltar">
+                            <button onclick="document.location='../books/matchbook'">VOLTAR</button>
                         </div>
+    
+                        <div class="w3-container">
+    
+                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">DELETAR</button>
+     
+                    </article>
                     
-                </article>
+               
                
                
                
@@ -85,10 +93,22 @@
             </div>
         </div>
     </footer>
-
-   
     
-    <script src="/js/main.js"></script>
+    <div id="id01" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <p>Deletar conta?</p>
+            <button class="cancelar" onclick="document.location='/users/myprofile'">CANCELAR</button>
+            <form method="POST" action="/users/<%= userlogin.id %>?_method=DELETE">
+              <button id="bt" class="delete" type="submit" onforminput="ConfirmDelete()">DELETAR USUARIO</button>
+          </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
 </body>
 
 </html>
