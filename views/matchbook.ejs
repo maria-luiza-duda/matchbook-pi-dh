@@ -56,11 +56,49 @@
 
                     <div class="tinder--buttons">
                         <button id="nope"><i class="fa fa-remove"></i></button>
-                        <button id="love"><i class="fa fa-heart"></i></button>
+                        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w-black" id="save" style="color: white;"><i class="fa fa-save"></i></button>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w-black" id="love"><i class="fa fa-heart"></i></button>                   
+                            
+                       
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="w3-container">
+
+            <div id="id01" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px" width="25px"></span>
+                        <p id="principal">It's a super like!</p>
+                    </div>                                    
+                                    
+                    <div class="logo-gif">
+                        <img src="/img/gifmatch.gif" alt="gifmatch" class="logo">
+                    </div>
+
+                    <form method="GET" action="/books/<%= listaBooks.id %>?_method=GET">
+                        <button id="bt" class="enviarMensagem" type="submit" onforminput="enviarMensagem()"><p>Envie uma mensagem...</p><br><img src="/img/wpp.png" height="40px" width="40px"></button>
+                    </form>
+       
+                </div>
+                           
+            </div>
+
+            <div id="id02" class="modal-save">
+                <div class="modal-content">
+                    <div class="modal-header-save">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px" width="25px"></span>
+                        <p id="principal">Você salvou este livro!</p>
+                    </div>
+       
+                </div>
+                           
+            </div>
+
+        </div>
+
     </main>
 
     <footer>
@@ -69,6 +107,9 @@
 
     <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
     <script src="/js/mt_cards.js"></script>
+
+   
+
 </body>
 
 </html>

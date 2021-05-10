@@ -164,6 +164,7 @@ nav {
     *zoom: 1;
     *display: inline;
     height: 100%;
+    
 }
 
 .col-1 {
@@ -175,3 +176,87 @@ nav {
     width: 60vw;
     height: 100%;
 }
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .modal-content {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(117, 163, 205, 0.72) 0%, rgba(193, 134, 221, 0.56) 77.6%);
+    top: 100px;
+    left: 605px;
+    height: 350px;
+    width: 450px;
+    padding: 50px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.modal .modal-content .modal-header #principal{
+    position: relative;
+    color: black;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    top: -35px;
+    left: 70px;
+}
+
+.modal .modal-content .logo-gif img {
+    height: 150px;
+    width: 150px;
+    margin: -20px 100px;
+}
+
+.modal .modal-content .enviarMensagem{
+    position: absolute;
+    margin: 20px 110px;
+    background: none;
+    border: none;
+}
+
+.modal-save {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-save .modal-content {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(117, 163, 205, 0.72) 0%, rgba(193, 134, 221, 0.56) 77.6%);
+    top: 200px;
+    left: 705px;
+    height: 150px;
+    width: 250px;
+    padding: 50px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.modal-save .modal-content .modal-header-save #principal{
+    position: relative;
+    color: black;
+    justify-content: center;
+    font-size:medium;
+    font-weight:bolder;
+    top: -35px;
+    left: 40px;
+}
+
