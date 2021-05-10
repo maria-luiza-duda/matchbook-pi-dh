@@ -1,7 +1,12 @@
-*Projeto Integrador em construção*
+<h1 align="center">
+    <br>
+    <p align="center">Matchbook - Swipe the page<p>
+</h1>
 
-Match Book
+<h2 align="center">
+    <br>
+    <p align="center">Projeto integrador do treinamento Decola Dev<p>
+</h2> 
 
-
-![Logo Match Book](./images/logo.png)
+![Logo Match Book](./img/logo.gif)
 
