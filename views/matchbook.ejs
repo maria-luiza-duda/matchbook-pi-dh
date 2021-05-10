@@ -13,14 +13,6 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-header">
-            <div class="logo">
-                <video src="/img/vheader_matchbook.mp4" autoplay="true" loop="true" muted class="logo"></video>
-            </div>
-        </div>
-    </header>
-
     <main>
         <div class="container-action">
             <article>
@@ -55,10 +47,8 @@
 
             <div class="tinder--buttons">
                 <button id="nope"><i class="fa fa-remove"></i></button>
-                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w-black"
-                    id="save" style="color: white;"><i class="fa fa-save"></i></button>
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w-black"
-                    id="mlove"><i class="fa fa-heart"></i></button>
+                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w-black" id="save" style="color: white;"><i class="fa fa-save"></i></button>
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w-black" id="mlove"><i class="fa fa-heart"></i></button>
             </div>
         </div>
 
@@ -67,8 +57,7 @@
             <div id="id01" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <span onclick="document.getElementById('id01').style.display='none'"
-                            class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px"
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px"
                                 width="25px" id="love"></span>
                         <p id="principal">It's a super like!</p>
                     </div>
@@ -88,8 +77,7 @@
             <div id="id02" class="modal-save">
                 <div class="modal-content">
                     <div class="modal-header-save">
-                        <span onclick="document.getElementById('id02').style.display='none'"
-                            class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px"
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright"><img src="/img/voltar.png" height="25px"
                                 width="25px"></span>
                         <p id="principal">Você salvou este livro!</p>
                     </div>
@@ -97,10 +85,6 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <h3>Match Book © 2021. Todos os direitos reservados</h3>
-    </footer>
 
     <script src="/js/mt_hgestures_cards.js"></script>
     <script src="/js/mt_cards.js"></script>
