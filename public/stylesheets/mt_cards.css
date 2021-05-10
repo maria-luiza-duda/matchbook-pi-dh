@@ -88,9 +88,13 @@ body {
     position: relative;
     opacity: 1;
     width: 74vw;
-    height: 86vh;
+    height: 100vh;
     z-index: 100;
     background-image: radial-gradient(circle, rgb(193 134 221 / 56%), rgb(0 0 0 / 0%), rgb(117 163 205 / 72%));
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .tinder--status {
@@ -125,12 +129,12 @@ body {
 
 .tinder--cards {
     flex-grow: 1;
-    padding-top: 40px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     z-index: 1;
+    align-content: center;
 }
 
 .tinder--card {
@@ -175,7 +179,7 @@ body {
 }
 
 .tinder--buttons {
-    flex: 0 0 100px;
+    flex: 0 0 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
