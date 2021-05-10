@@ -8,5 +8,5 @@
     <p align="center">Projeto integrador do treinamento Decola Dev<p>
 </h2> 
 
-![Logo Match Book](/img/logo.gif)
+![Logo Match Book](./public/img/logo.gif)
 
